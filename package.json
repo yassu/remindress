@@ -1,0 +1,16 @@
+{
+  "name": "slash-box",
+  "version": "0.0.1",
+  "description": "Gui Tool for making slack commands",
+  "main": "index.js",
+  "scripts": {
+    "start": "node_modules/.bin/electron .",
+    "build": "node build.js"
+  },
+  "author": "yassu",
+  "license": "MIT",
+  "devDependencies": {
+    "electron-packager": "^8.6.0",
+    "electron-prebuilt": "^1.4.13"
+  }
+}
