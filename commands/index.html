@@ -65,6 +65,16 @@
                 }
                 return cmd;
             }
+
+	    function changed_after_time() {
+	    every_date_elem = document.getElementById('every_date');
+	    after_time_hour = document.getElementById('after_time_hour');
+
+	    document.getElementById('every_date').disabled = "true";
+	    document.getElementById('date').disabled = "true";
+	    document.getElementById('date_hour').disabled = "true";
+	    document.getElementById('date_minute').disabled = "true";
+	    }
         </script>
     </head>
     <body>
@@ -79,9 +89,9 @@
                 <td></td>
             </tr>
             <tr>
-                <td> After Time: </td>
+              <td> After Time: </td>
                 <td>
-                    <select id="after_time_hour">
+                    <select id="after_time_hour" onChange="changed_after_time()">
                         <option value="00"> 00 </option>
                         <option value="01"> 01 </option>
                         <option value="02"> 02 </option>
@@ -108,7 +118,7 @@
                         <option value="23"> 23 </option>
                     </select>
                     :
-                    <select id="after_time_minute">
+                    <select id="after_time_minute" onChange="changed_after_time()">
                         <option value="00"> 00 </option>
                         <option value="05"> 05 </option>
                         <option value="10"> 10 </option>
