@@ -81,6 +81,13 @@
 	    document.getElementById('after_time_minute').disabled = "true";
 	    document.getElementById('every_date').disabled = "true";
 	    }
+
+	    function changed_every_date() {
+	    document.getElementById('after_time_hour').disabled = "true";
+	    document.getElementById('after_time_minute').disabled = "true";
+	    document.getElementById('date').disabled = "true";
+	    document.getElementById('every_date').disabled = "true";
+	    }
         </script>
     </head>
     <body>
@@ -198,7 +205,7 @@
                 <td></td>
                 <td>
                     <!-- TODO: pulldownを入れ子にする -->
-                    <select id="every_date">
+                    <select id="every_date" onChange='changed_every_date();'>
                         <option value=""> </option>
                         <option value="week_0">   Every Sunday    </option>
                         <option value="week_1">   Every Monday    </option>
