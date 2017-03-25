@@ -63,6 +63,9 @@
                         cmd += after_time_minute + " minute ";
                     }
                 }
+            if (after_time_hour == "00" && after_time_minute == "00") {
+	    cmd += "at " + date_hour + ":" + date_minute + " ";
+	    }
                 return cmd;
             }
 
