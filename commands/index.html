@@ -82,11 +82,15 @@
 	    document.getElementById('every_date').disabled = "true";
 	    }
 
+	    function changed_date_hour() {
+	    document.getElementById('after_time_hour').disabled = "true";
+	    document.getElementById('after_time_minute').disabled = "true";
+	    }
+
 	    function changed_every_date() {
 	    document.getElementById('after_time_hour').disabled = "true";
 	    document.getElementById('after_time_minute').disabled = "true";
 	    document.getElementById('date').disabled = "true";
-	    document.getElementById('every_date').disabled = "true";
 	    }
         </script>
     </head>
@@ -158,7 +162,7 @@
                 <td></td>
                 <td></td>
                 <td>
-                    <select id="date_hour">
+                    <select id="date_hour" onChange="changed_date_hour()">
                         <option value="0">  00 </option>
                         <option value="1">  01 </option>
                         <option value="2">  02 </option>
