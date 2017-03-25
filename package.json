@@ -2,7 +2,7 @@
   "name": "slash-box",
   "version": "0.0.1",
   "description": "Gui Tool for making slack commands",
-  "main": "html/index.js",
+  "main": "index.js",
   "scripts": {
     "start": "node_modules/.bin/electron .",
     "build": "node build.js"
