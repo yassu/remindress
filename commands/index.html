@@ -22,16 +22,19 @@
                 // validation
                 if (!to)
                 {
-                    alert('Input "To" variable');
+          alert('Input "To" variable');
+	  return;
                 }
                 if(after_time_hour == "00" && after_time_minute == "00" &&
                    !date &&
                    !every_date) {
-                    alert('Indicate date');
+          alert('Indicate date');
+	  return;
                 }
                 if (!message)
                 {
-                    alert('Input "Message" variable');
+          alert('Input "Message" variable');
+	  return;
                 }
 
                 message = get_slack_command(to,
