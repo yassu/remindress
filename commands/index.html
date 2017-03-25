@@ -8,7 +8,7 @@
         <title>Generator of Remind command for slack</title>
 
         <script>
-            function clicked() {
+          function clicked() {
                 // get values
                 to = document.getElementById("to").value;
                 after_time_hour = document.getElementById("after_time_hour").value;
@@ -50,7 +50,7 @@
                                        date_hour, date_minute,
                                        every_date,
                                        message) {
-                cmd = '/remind ' + to + ' "' + message + '"';
+                cmd = '/remind ' + to + ' "' + message + '" ';
 
                 if (after_time_hour != "00" || after_time_minute != "00") {
                     cmd += " in ";
@@ -62,7 +62,22 @@
                     {
                         cmd += after_time_minute + " minute ";
                     }
-                }
+            }
+
+	    if (every_date != "") {
+	    cmd += {
+	        "week_0": "every Sunday",
+	    "week_1": "every Monday",
+	    "week_2": "every Tuesday",
+	    "week_3": "every wednesday",
+	    "week_4": "every Thursday",
+	    "week_5": "every Friday",
+	    "week_6": "every Saturday",
+	    "everyday": "every day",
+	    "weekday": "every weekday"
+	    }[every_date] + " ";
+	  }
+
             if (after_time_hour == "00" && after_time_minute == "00") {
 	    cmd += "at " + date_hour + ":" + date_minute + " ";
 	    }
