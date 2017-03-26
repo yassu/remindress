@@ -28,7 +28,14 @@
 	    select.appendChild(reminder_option);
  	}
 	    
-        function commands_changed() {
+            function commands_changed() {
+	    var command = document.getElementById('commands').value;
+	    if (command == "index") {
+	        location.href = 'file://' + __dirname + 'index.html';
+	    }
+	    else {
+	    location.href = 'file://' + __dirname + '/commands' + '/reminder.html';
+	    }
 	}
       </script>
 
@@ -38,7 +45,6 @@
       <center>
         <h2> /-Box </h2>
       </center>
-
-      <select id="commands"> </select>
+      <select id="commands" onChange="commands_changed()"> </select>
   </body>
 </html>
