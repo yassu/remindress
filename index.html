@@ -2,12 +2,30 @@
 
 <html>
     <head>
-        <meta charset='utf-8' />
+      <meta charset='utf-8' />
+      <script>
+	window.onload = function(){
+	    commands_pulldown();
+}
+                function commands_pulldown() {
+            // <select id="select"> を取得
+            var select = document.getElementById('commands');
+	    
+            // <option> 要素を宣言
+            var reminder_option = document.createElement('option');
+            reminder_option.setAttribute('value', 'value属性に入れる値');
+            reminder_option.innerHTML = '要素に入れる文字列';
+	    select.appendChild(reminder_option);
+ 	    }
+      </script>
+
     <title> /-Box  </title>
   </head>
     <body>
       <center>
         <h2> /-Box </h2>
       </center>
+
+      <select id="commands"> </select>
   </body>
 </html>
