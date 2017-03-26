@@ -6,17 +6,25 @@
       <script>
 	window.onload = function(){
 	    commands_pulldown();
-}
-                function commands_pulldown() {
+        }
+        function commands_pulldown() {
             // <select id="select"> を取得
             var select = document.getElementById('commands');
 	    
-            // <option> 要素を宣言
-            var reminder_option = document.createElement('option');
-            reminder_option.setAttribute('value', 'value属性に入れる値');
-            reminder_option.innerHTML = '要素に入れる文字列';
-	    select.appendChild(reminder_option);
- 	    }
+          // <option> 要素を宣言
+	    var blank_option = document.createElement('option');
+	    blank_option.setAttribute('value', '');
+	    blank_option.innerHTHML = '';
+	    select.appendChild(blank_option);
+	    
+            var index_option = document.createElement('option');
+            index_option.setAttribute('value', 'index');
+            index_option.innerHTML = 'index';
+	    select.appendChild(index_option);
+ 	}
+	    
+        function commands_changed() {
+	}
       </script>
 
     <title> /-Box  </title>
