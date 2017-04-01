@@ -18,8 +18,8 @@ app.on('window-all-closed', function()
 app.on('ready', function()
 {
   // メイン画面の表示。ウィンドウの幅、高さを指定できる
-  mainWindow = new BrowserWindow({width: 800, height: 600, minWidth: 800,
-    maxWidth: 800, minHeight: 600, maxHeight: 600, center: true});
+  mainWindow = new BrowserWindow({width: 800, height: 400, minWidth: 800,
+    maxWidth: 800, minHeight: 400, maxHeight: 400, center: true});
   mainWindow.loadURL('file://' + __dirname + '/index.html');
 
   // ウィンドウが閉じられたらアプリも終了
