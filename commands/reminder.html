@@ -7,7 +7,13 @@
     <meta name="robots" content="all">
     <title>Generator of Remind command for slack</title>
 
+    <script type="text/javascript" src="./../lib/lib.js"> </script>
     <script>
+      window.onload = function()
+      {
+        commands_pulldown();
+      }
+
       function clicked()
       {
         // get values
